@@ -788,7 +788,7 @@ static void s3c24xx_serial_set_termios(struct uart_port *port,
 
 	spin_lock_irqsave(&port->lock, flags);
 
-	dbg("setting ulcon to %08x, brddiv to %d, udivslot %08x\n",
+/*	dbg("setting ulcon to %08x, brddiv to %d, udivslot %08x\n",
 	    ulcon, quot, udivslot);
 
 	wr_regl(port, S3C2410_ULCON, ulcon);
@@ -797,7 +797,7 @@ static void s3c24xx_serial_set_termios(struct uart_port *port,
 
 	if (ourport->info->has_divslot)
 		wr_regl(port, S3C2443_DIVSLOT, udivslot);
-
+*/
 	dbg("uart: ulcon = 0x%08x, ucon = 0x%08x, ufcon = 0x%08x\n",
 	    rd_regl(port, S3C2410_ULCON),
 	    rd_regl(port, S3C2410_UCON),
